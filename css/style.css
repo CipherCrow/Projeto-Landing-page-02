@@ -2,9 +2,10 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 .container{
-	max-width: 1280px;
+	max-width: 1020px;
 	margin: 0 auto;
 	padding: 0 2%;
 }
@@ -36,7 +37,85 @@ header > .container{
 	background-image: url('../images/logo2.png');
 }
 																					/*Main*/
+
+main > .container{
+	display: flex;
+	justify-content: flex-end;
+	background-image: url("../images/bg-form.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.formulario{
+	width: 40%;
+	box-shadow: 1px 1px 5px #ddd;
+	background-color: white;
+	margin: 20px 0;
+}
+.formulario > h2{
+	padding: 20px 10px;
+	text-align: center;
+	background-color: #ccc;
+	font-size: 20px;
+	font-weight: lighter;
+}
+.formulario > form{
+	padding: 25px 15px;
+}
+.formulario > form .form-wraper{
+	margin: 20px 0;
+}
+.formulario > form .form-wraper label{
+	font-size: 15px;
+	color: #525252;
+	font-weight: lighter;
+}
+.formulario > form .form-wraper input:not([type=submit]){
+	width: 100%;
+	padding: 0px 10px;
+	border: 1px solid #ccc;
+	height: 40px;
+}
+.formulario > form .form-wraper input[type=submit]{
+	width: 100%;
+	margin: 15px 0;
+	background-color: #033C50;
+	height: 45px;
+	border: none;
+	font-size: 25px;
+	color: white; 
+}
+
 																					/*Chamada*/
+
+.cta > .container{
+	position: relative;
+	padding: 30px 0;
+	color: white;
+	text-align: center;
+	background-color: #29526d;
+}
+.cta > .container > .simple-seta{
+	position: absolute;
+	left: calc(50% - 30px);
+	top: -30px;
+	display: inline-block;
+	background-image: url("../images/arrow.png");
+	width: 60px;
+	height: 60px;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-origin: center;
+	background-position: center;
+}				
+.cta > .container > h2{
+	font-weight: normal;
+	font-size: 23px;
+	padding: 10px 0;
+}
+.cta > .container > p{
+	font-size: 16px;
+}
 																					/*mosaico*/
 																					/*footer*/
 																					/*Responsivo*/
