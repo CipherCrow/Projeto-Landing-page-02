@@ -11,7 +11,41 @@
 .w70{width: 70%;}
 .w30{width: 30%;}
 																					/*Header*/
+
+header{
+	background-color: rgb(220,220,220);
+	padding: 10px 0;
+}	
+header > .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+.logo{
+	width: 150px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+}
+.imagem-logo1{
+	background-image: url('../images/logo1.png');
+}
+.imagem-logo2{
+	background-image: url('../images/logo2.png');
+}
 																					/*Main*/
 																					/*Chamada*/
 																					/*mosaico*/
 																					/*footer*/
+																					/*Responsivo*/
+@media screen and (max-width: 800px){
+	header > .container{
+		flex-flow: column;
+		align-items: center;
+	}
+	header > div.container .logo{
+		margin-top: 10px;
+	}																					
+}
