@@ -4,13 +4,16 @@
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 }
+body,html{
+	height: 100%;
+}
 .container{
 	max-width: 1020px;
 	margin: 0 auto;
 	padding: 0 2%;
 }
-.w70{width: 70%;}
-.w30{width: 30%;}
+.w60{width: 60%;}
+.w40{width: 40%;}
 																					/*Header*/
 
 header{
@@ -117,14 +120,86 @@ main > .container{
 	font-size: 16px;
 }
 																					/*mosaico*/
+
+section.mosaico > .container{
+	background-color: #468670;
+	padding: 0 0;
+}
+.single-mosaico{
+	display: flex;
+	flex-wrap: wrap;
+}
+.reverse{
+	flex-direction: row-reverse;
+}
+.imagem-mosaico{
+	background-position: center;
+	background-size: cover;
+}
+.single-mosaico > .imagem-mosaico{
+	width: 60%;
+}
+div.container > .single-mosaico:nth-child(1) > .imagem-mosaico{
+	background-image: url('../images/mosaico1.jpg');
+}
+div.container > .single-mosaico:nth-child(2) > .imagem-mosaico{
+	background-image: url('../images/mosaico2.jpg');
+}
+div.container > .single-mosaico:nth-child(3) > .imagem-mosaico{
+	background-image: url('../images/mosaico3.jpg');
+}
+div.container > .single-mosaico:nth-child(4) > .imagem-mosaico{
+	background-image: url('../images/mosaico4.jpg');
+}
+.texto-mosaico{
+	padding: 30px;
+}
+.texto-mosaico p{
+	color: white;
+	font-size: 18px;
+}
+
 																					/*footer*/
+
+footer{
+	text-align: center;
+	padding: 15px 0;
+	background-color: rgb(220,220,220);
+}
+footer p{
+	margin-top: 4px;
+	font-size: 13px;
+}
+footer img{
+	width: 120px;
+}																					
 																					/*Responsivo*/
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
+	.w60,.w40{
+		width: 100%;
+	}
+	.single-mosaico > .imagem-mosaico{
+		width: 100%;
+		padding-top: 80%;
+	}
+	.texto-mosaico p{
+		text-align: center;
+	}
+main > .container{
+		justify-content: center;
+	}
+	.formulario{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 510px){
+	
 	header > .container{
 		flex-flow: column;
 		align-items: center;
 	}
 	header > div.container .logo{
 		margin-top: 10px;
-	}																					
+	}
+																						
 }
