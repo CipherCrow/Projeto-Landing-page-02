@@ -13,4 +13,6 @@ O controle das tarefas será monitorado pelo GitHub.
 - :beetle: Correção de bug
 - :checkered_flag: Release
 
-## Projeto pronto para ser visualizado
+## Projeto pronto para ser visualizado	
+
+https://ciphercrow.github.io/projeto-landing-page-02/
