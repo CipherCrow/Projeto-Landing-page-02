@@ -21,6 +21,77 @@ html{
 :root{
 	--sombra-padrao: 0 .2rem .2rem rgba(0,0,0, .5);
 }
+			/*preloader e getoverhere*/
+.preloader{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	background-color: #ddd;
+	width: 100%;
+	height: 100vh;
+	z-index: 90;
+	transition: .3s;
+}
+.preloader .icone{
+	width: 10rem;
+	height: 10rem;
+	border: .1rem dashed #ccc;
+	border-top: 3rem solid #468670;
+	border-bottom: 3rem solid #468670;
+	border-radius: 50%;
+	animation: rotateInfinite 1s infinite; 
+}
+@keyframes rotateInfinite{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+#toTop{
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: white;
+	background-color: #468670;
+	border:1px solid black;
+	z-index: 60;
+	border-radius: 50%;
+	box-shadow: var(--sombra-padrao);
+}
+#toTop p{
+	font-size: 1.4rem;
+	position: absolute;
+	top: -2rem;
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: #468670;
+	text-shadow: 0px 0px 5px black;
+}
+#toTop .simple-seta{
+	display: inline-block;
+	background-image: url("../images/arrow.png");
+	width: 4rem;
+	height: 4rem;
+	transform: rotate(180deg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-origin: center;
+	background-position: center;
+	border-radius: 50%;
+}
+#toTop:hover{
+	opacity: .6;
+}			
+
 																					/*Header*/
 
 header{
@@ -64,6 +135,20 @@ main > .container{
 	box-shadow: .1rem .1rem .5rem #ddd;
 	background-color: white;
 	margin: 2rem 0;
+	opacity: 0;
+	animation: pop 1s .5s forwards;
+}
+@keyframes pop{
+	0%{
+		transform: scale(.8);
+	}
+	80%{
+		transform: scale(1.1);		
+	}
+	100%{
+		transform: scale(1);
+		opacity: 1;		
+	}
 }
 .formulario > h2{
 	padding: 2rem 1rem;
@@ -115,7 +200,7 @@ main > .container{
 	text-align: center;
 	background-color: #29526d;
 }
-.simple-seta{
+.container .simple-seta{
 	position: absolute;
 	left: calc(50% - 3rem);
 	top: -3rem;
@@ -218,6 +303,15 @@ footer img{
 	.w50,.w40{
 		max-width: 100%;
 	}
+	#toTop{
+		width: 3rem;
+		height: 3rem;
+	}
+
+	#toTop .simple-seta{
+		width: 3rem;
+		height: 3rem;
+	}
 	.imagem-mosaico:hover{
 		max-width: unset;
 	}
@@ -236,7 +330,9 @@ footer img{
 	}
 }
 @media screen and (max-width: 510px){
-	
+	#toTop p{
+		display: none;
+	}
 	header > .container{
 		flex-flow: column;
 		align-items: center;

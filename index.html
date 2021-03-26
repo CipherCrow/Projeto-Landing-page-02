@@ -15,7 +15,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header>
+
+	<div class="preloader">
+		<div class="icone"></div>
+	</div> <!-- preloader -->
+
+	<header id="topo">
 		<div class="container">
 			<a href=""><div class="imagem-logo1 logo"></div></a>
 			<a href=""><div class="imagem-logo2 logo"></div></a>
@@ -96,5 +101,22 @@
 		<p>Nenhuma das marcas ou imagens presentes neste site são de minha autoria ou posse.</p>
 		<p>&copy Nenhum dos direitos reservados.</p>	
 	</footer>
+
+	<a id="toTop" href="#topo">
+		<p>topo</p>
+		<div class="simple-seta"></div>
+	</a> <!-- back to top -->
+
+	<script type="text/javascript">
+
+	let preloader = document.querySelector(".preloader");
+	window.addEventListener('load',function(){
+		preloader.style.opacity= '0';
+		setTimeout(function(){
+			preloader.style.display= 'none';
+		}, 300);
+	});
+
+	</script>
 </body>
 </html>
