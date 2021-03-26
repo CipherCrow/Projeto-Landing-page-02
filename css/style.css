@@ -12,11 +12,14 @@ body,html{
 	margin: 0 auto;
 	padding: 0 2%;
 }
-.w60{width: 60%;}
-.w40{width: 40%;}
+.w50{max-width: 50%;}
+.w40{max-width: 40%;}
 html{
 	font-size: 10px;
 	scroll-behavior: smooth;
+}
+:root{
+	--sombra-padrao: 0 .2rem .2rem rgba(0,0,0, .5);
 }
 																					/*Header*/
 
@@ -36,6 +39,9 @@ header > .container{
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-position: center;
+}
+.logo:hover{
+	opacity: .9;
 }
 .imagem-logo1{
 	background-image: url('../images/logo1.png');
@@ -65,6 +71,7 @@ main > .container{
 	background-color: #ccc;
 	font-size: 2rem;
 	font-weight: lighter;
+	text-transform: uppercase;
 }
 .formulario > form{
 	padding: 2.5rem 1.5rem;
@@ -91,6 +98,12 @@ main > .container{
 	border: none;
 	font-size: 2.5rem;
 	color: white; 
+	cursor: pointer;
+	box-shadow: var(--sombra-padrao);
+}
+.formulario > form .form-wraper input[type=submit]:hover{
+	opacity: .9;
+	color: black;
 }
 
 																					/*Chamada*/
@@ -102,7 +115,7 @@ main > .container{
 	text-align: center;
 	background-color: #29526d;
 }
-.cta > .container > .simple-seta{
+.simple-seta{
 	position: absolute;
 	left: calc(50% - 3rem);
 	top: -3rem;
@@ -114,14 +127,30 @@ main > .container{
 	background-repeat: no-repeat;
 	background-origin: center;
 	background-position: center;
+	animation: pulse 1s infinite ease-in;
+	box-shadow: var(--sombra-padrao);
+	border-radius: 50%;
+}
+@keyframes pulse{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1);
+	}
 }				
 .cta > .container > h2{
 	font-weight: normal;
 	font-size: 2.3rem;
 	padding: 1rem 0;
+	text-shadow: var(--sombra-padrao);
 }
 .cta > .container > p{
 	font-size: 1.6rem;
+	text-shadow: var(--sombra-padrao);
 }
 																					/*mosaico*/
 
@@ -132,16 +161,22 @@ section.mosaico > .container{
 .single-mosaico{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .reverse{
 	flex-direction: row-reverse;
 }
 .imagem-mosaico{
+	width: 100%;
 	background-position: center;
 	background-size: cover;
+	transition: .3s;	
 }
-.single-mosaico > .imagem-mosaico{
-	width: 60%;
+.imagem-mosaico:hover{
+	max-width: 60%;
+}
+.imagem-mosaico:not:hover{
+	max-width: 50%;
 }
 div.container > .single-mosaico:nth-child(1) > .imagem-mosaico{
 	background-image: url('../images/mosaico1.jpg');
@@ -156,11 +191,12 @@ div.container > .single-mosaico:nth-child(4) > .imagem-mosaico{
 	background-image: url('../images/mosaico4.jpg');
 }
 .texto-mosaico{
-	padding: 3rem;
+	padding: 3rem 2rem;
 }
 .texto-mosaico p{
 	color: white;
 	font-size: 1.8rem;
+	text-shadow: var(--sombra-padrao);
 }
 
 																					/*footer*/
@@ -179,21 +215,24 @@ footer img{
 }																					
 																					/*Responsivo*/
 @media screen and (max-width: 768px){
-	.w60,.w40{
-		width: 100%;
+	.w50,.w40{
+		max-width: 100%;
 	}
-	.single-mosaico > .imagem-mosaico{
+	.imagem-mosaico:hover{
+		max-width: unset;
+	}
+	.imagem-mosaico{
 		width: 100%;
 		padding-top: 80%;
 	}
 	.texto-mosaico p{
 		text-align: center;
 	}
-main > .container{
+	main > .container{
 		justify-content: center;
 	}
 	.formulario{
-		width: 80%;
+		width: 90%;
 	}
 }
 @media screen and (max-width: 510px){
