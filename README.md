@@ -1,18 +1,23 @@
-# Projeto de Landing Page 
+##  Projeto de landing-page!
+Projeto de Website desenvolvido no curso Webmaster Front-end da DankiCode. Consiste em um projeto landing-page para um cliente. Este foi um dos primeiros projetos feitos no curso, por isso tem um design rustico que pode ser melhorado de dezenas de formas diferentes. Não possuo nenhum direito legal sobre a marca e apenas reproduzo o projeto com fins educativos.
 
- Mais um modelo de Landing Page para apresentação de produto. Interface diferente, mesmo objetivo.
+## 💻 Tecnologias 
+>![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+>![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## Tarefas
-
-O controle das tarefas será monitorado pelo GitHub.
+## 💻 Alterações do Original
+1. FlexBox.
+2. Animações com css.
+3. Acessibilidade.
+4. MetaTags
 
 ## Ícones
+- :up: Atualização.
+- :bug: Correcão.
 
-- :package: Nova funcionalidade
-- :up: Atualização
-- :beetle: Correção de bug
-- :checkered_flag: Release
+## 📱 GitHub-Pages
+- [x] Responsividade
+- [x] Finalizado
+- [x] Ao Ar
 
-## Projeto pronto para ser visualizado	
-
-https://ciphercrow.github.io/projeto-landing-page-02/
+>GitHub-Pages: https://ciphercrow.github.io/projeto-landing-page-02/
